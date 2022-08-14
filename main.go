@@ -25,13 +25,10 @@ func (p Person) disp(job string) {
 	//return "---------"
 }
 
-func (p *Person) update() {
-
-	fmt.Println(p.id)
-	fmt.Println(p.name)
-	fmt.Println(p.age)
-	fmt.Println(p.sex)
-	//return "---------"
+func (p *Person) update(n string, a int, s string) {
+	p.name = n
+	p.age = a
+	p.sex = s
 }
 
 func (e Employee) toLower() string {
@@ -51,10 +48,7 @@ func main() {
 	}
 
 	p.disp((e.toLower()))
-	p.name = "catalina"
-	p.age = 16
-	p.sex = "female"
-	p.update()
+	p.update("Catalina", 18, "female")
 	p.disp((e.toLower()))
 
 }
